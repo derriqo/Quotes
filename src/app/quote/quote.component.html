@@ -3,7 +3,16 @@
   <p>Don't make it a drama, all the problems you may have someone has already lived them and came up with a solution for them</p>
   <div class="container">
     <div class="row">
-      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      <div class="col-md-04">
+        <app-quote-form (addQuote)="addNewQuote($event)">
+        </app-quote-form>
+      </div>
     </div>
+    <ul>
+      <div *ngFor='let quote of quotes'>
+        <li>{{quote.name}}</li>
+        <app-quote-details [quote]='quote'></app-quote-details>
+      </div>
+    </ul>
   </div>
 </div>

@@ -1,4 +1,4 @@
-# TASTEMAKER
+# QUOTES
 
 
 # Table of contents
@@ -6,11 +6,11 @@
 * [General Info](#General-Info)
 * [Technologies](#Technologies)
 * [Setup](#Setup)
-* [Behaviour Driven Technologies](#Behaviour-Driven-Technologies)
+* [Behavior Driven Technologies](#Behaviour-Driven-Technologies)
 * [Support](#Support)
 * [Bugs](#Bugs)
-* [Team](#Team)
-* [License](#License)
+* [Creator](#Creator)
+
 
 ## General info
 ---
