@@ -3,7 +3,7 @@
   <p>Don't make it a drama, all the problems you may have someone has already lived them and came up with a solution for them</p>
   <div class="container">
     <div class="row">
-      <app-quote-form>[quote]='quote'</app-quote-form>
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
   </div>
 </div>
