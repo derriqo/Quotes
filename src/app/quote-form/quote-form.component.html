@@ -1,37 +1,37 @@
 <div class="container-fluid">
   <div class="row">
 
-    <form  (ngSubmit)='submitQuote()' #qouteForm='ngForm'>
+    <form (ngSubmit)='submitQuote()' #qouteForm='ngForm'>
       <div class="form-group">
 
         <label for="name">User </label>
         <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name='name' #name="ngModel" required>
         <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                    <p> Name is Required</p>
-                    </div>
+          <p> Name is Required</p>
+        </div>
       </div>
       <div class="form-group">
 
         <label for="author">Author</label>
         <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name='author' #author="ngModel">
         <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-                    <p>Please Enter Author Name </p>
-                    </div>
+          <p>Please Enter Author Name </p>
+        </div>
       </div>
       <div class="form-group">
 
         <label for="description">Description</label>
         <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description" name='description' #description="ngModel" required></textarea>
         <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
-                    <p> Please Write Quote</p>
-                    </div>
+          <p> Please Write Quote</p>
+        </div>
       </div>
-      <button type="Submit" class="btn btn-success btn-block">Add Quote</button>
+      <button type="Submit" class="btn btn-success btn-block">Submit Quote</button>
     </form>
 
   </div>
 </div>
 
-<p>Name: {{newQuote.name}}</p>
+<!-- <p>Name: {{newQuote.name}}</p>
 <p>Author: {{newQuote.author}}</p>
-<p>Quote: {{newQuote.description}}</p>
+<p>Quote: {{newQuote.description}}</p> -->
