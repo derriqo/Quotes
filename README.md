@@ -10,7 +10,6 @@
 * [Support](#Support)
 * [Bugs](#Bugs)
 * [Creator](#Creator)
-* [Further help](#Further help)
 
 
 ## General info
@@ -62,7 +61,3 @@ None at the moment, but would love to hear your feedback!
 ---
 
 Created by Derrick William.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
