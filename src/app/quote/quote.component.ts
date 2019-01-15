@@ -9,14 +9,14 @@ import { DatePipe } from '../../../node_modules/@angular/common';
 })
 export class QuoteComponent implements OnInit {
 
-  quotes = [new Quote(0,"","","",new Date())];
+  quotes = [];
 
   toogleDetails(index) {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
 }
     deleteQuote(isComplete, index) {
       if (isComplete) {
-        let toDelete = confirm(`Are you sure you want to delete this Quote${this.quotes[index].quote}`);
+        let toDelete = confirm(`Are you sure you want to delete this Quote`);
 
         if (toDelete) {
           this.quotes.splice(index, 1);

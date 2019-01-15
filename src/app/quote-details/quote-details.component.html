@@ -1,7 +1,6 @@
-  <p><strong>Quote:</strong> {{quote.description}}</p>
-  <p><strong>Name:</strong> {{quote.name}} <strong>Author:</strong> {{quote.author}}</p>
-  <p><strong>Written on:</strong> {{quote.completeDate}}</p>
+<p><strong>Quote:</strong> {{quote.description}} <strong>Author:</strong> {{quote.author}}</p>
+<p><strong>Written</strong> {{quote.completeDate|dateCount}} days ago by <strong>Name:</strong> {{quote.name}}</p>
 
-  <button class="btn btn-danger"  (click) = 'quoteDelete(true)'><i class="fa fa-trash"></i></button>
-  <button class="btn btn-success" ><i class="fa fa-thumbs-up"></i></button>
-  <button class="btn btn-danger" ><i class="fa fa-thumbs-down"></i></button>
+<button class="btn btn-danger" (click)='quoteDelete(true)'><i class="fa fa-trash"></i></button>
+<button class="btn btn-success"><i class="fa fa-thumbs-up"></i></button>
+<button class="btn btn-danger"><i class="fa fa-thumbs-down"></i></button>
