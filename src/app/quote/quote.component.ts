@@ -9,7 +9,7 @@ import { DatePipe } from '../../../node_modules/@angular/common';
 })
 export class QuoteComponent implements OnInit {
 
-  quotes = [];
+  quotes = [new Quote(0,"","","",new Date())];
 
   toogleDetails(index) {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
@@ -27,8 +27,8 @@ export class QuoteComponent implements OnInit {
     addNewQuote(quote) {
       let quoteLength = this.quotes.length;
       quote.id = quoteLength + 1;
-      quote.completeDate = new Date(quote.completeDate)
-      this.quotes.push(quote)
+      quote.completeDate = new Date(quote.completeDate);
+      this.quotes.push(quote);
 
     }
     constructor() { }
