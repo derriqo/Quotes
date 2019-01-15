@@ -1,13 +1,19 @@
 h1 {
   text-align: center;
-  
+    font-family: 'Courgette', cursive;
+
 }
 
 p {
   text-align: center;
 
 }
+#fqote{
+  font-family: 'Courgette', cursive;
+  font-size: 22px;
+}
 
 .jumbotron {
-  background-color: orange;
+  background-image: url(src/assets/other.jpg);
+  background-size: cover;
 }
