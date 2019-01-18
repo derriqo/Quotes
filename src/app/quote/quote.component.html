@@ -12,8 +12,19 @@
     </div>
     <div class="col col-md-8">
       <ul>
-        <div *ngFor='let quote of quotes'>
+        <div *ngFor='let quote of quotes; let i=index'>
+          <p appHighlight *ngIf="hUpvote()===quote.uvotes && quote.uvotes>0"><strong>Quote:</strong>{{quote.description}}</p>
+
+          <p *ngIf="hUpvote()!==quote.uVotes || quote.uVotes===0">Quote: {{quote.description}}</p>
+
+          <p><strong>Written</strong> {{quote.completeDate|timeAgo}} <strong> By:</strong>{{quote.name}}</p>
+
           <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+          <button class="btn btn-danger" (click)='deleteQuote(true,i)'><i class="fa fa-trash"></i></button>
+          <button class="btn btn-success"(click)='upVote(i)'><i class="fa fa-thumbs-up"></i></button>
+          <button class="btn btn-danger" (click)='downVote(i)'><i class="fa fa-thumbs-down"></i></button>
+          <p><strong>upVotes:</strong>{{quote.uvotes}} <strong>downVotes:</strong>  {{quote.dvotes}}</p>
+
         </div>
       </ul>
 
@@ -31,4 +42,4 @@
     </div>
 
   </div>
-</div> -->
+</div>

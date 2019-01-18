@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter} from '@angular/core';
 import { Quote } from '../quote';
 import { DatePipe } from '../../../node_modules/@angular/common';
 
@@ -9,7 +9,12 @@ import { DatePipe } from '../../../node_modules/@angular/common';
 })
 export class QuoteComponent implements OnInit {
 
+  @Input() quote:Quote;
+
+  @Output() isComplete= new EventEmitter<boolean>();
+
   quotes = [];
+
 
   toogleDetails(index) {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
@@ -30,6 +35,36 @@ export class QuoteComponent implements OnInit {
       quote.completeDate = new Date(quote.completeDate);
       this.quotes.push(quote);
 
+    }
+
+    uvotes = 0;
+    dvotes = 0;
+    timePass = 0;
+
+    tPassed(){
+      this.timePass = 0;
+    }
+    upVote(i){
+      this.quotes[i].uvotes +=1;
+    }
+    downVote(i){
+      this.quotes[i].dvotes +=1;
+    }
+    startNum:number
+    lastNum:number
+    ctr:number
+
+    hUpvote(){
+      this.startNum = 0
+      this.lastNum = 0
+       for(this.ctr=0 ; this.ctr < this.quotes.length; this.ctr++) {
+        this.lastNum = this.quotes[this.ctr].uvotes;
+        if(this.lastNum > this.startNum){
+          this.startNum = this.lastNum
+        }
+      }
+
+      return  this.startNum
     }
     constructor() { }
 
